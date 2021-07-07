@@ -17,7 +17,7 @@ const PlaylistsComponent = ({ playlists }) => {
     return (
         <div className='playlistsComponent' >
             {playlists && playlists.map(playlist =>
-                <Link to={''} onClick={() => { setSelectedPlaylist(playlist.id) }} className={selectedPlaylist === playlist.id ? 'pc-playlist-item pc-playlist-item-selected' : 'pc-playlist-item'} key={playlist.id}>
+                <Link to={{ pathname: `/playlist/${playlist.id}`, state: { playlistName: playlist.name, image: playlist.images[1] } }} onClick={() => { setSelectedPlaylist(playlist.id) }} className={selectedPlaylist === playlist.id ? 'pc-playlist-item pc-playlist-item-selected' : 'pc-playlist-item'} key={playlist.id}>
                     <div >
                         {playlist.name}
                     </div>

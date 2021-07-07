@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     const hash = getAccessTokenFromUrl()
-    console.log(hash)
     window.location.hash = ''
     const _authToken = hash['access_token']
     if (_authToken) {

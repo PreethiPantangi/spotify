@@ -50,7 +50,6 @@ const ProfileComponent = ({ profile }) => {
 }
 
 const mapStateToProps = state => {
-    console.log(state.profile.user)
     return {
         profile: state.profile.user
     }

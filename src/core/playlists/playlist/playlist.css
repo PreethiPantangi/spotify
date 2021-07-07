@@ -1,0 +1,56 @@
+.pc-info {
+    padding-bottom: 6%;
+}
+.pc-info-left {
+    width: 30%;
+    float: left;
+}
+.pc-info-right {
+    width: 70%;
+    float: left;
+    /* height: 324px; */
+    height: 350px;
+}
+
+.pc-info-right-content {
+    margin-top: 23% !important;
+}
+
+.pc-info-left , .pc-info-right {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    border-bottom: 1px solid rgba(165, 159, 159, 0.527);
+}
+
+
+.pc-info-right-tracks-cell-left {
+    width: 18%;
+    float: left;
+}
+
+.pc-info-right-tracks-cell-right {
+    width: 82%;
+    float: left;
+}
+
+.pc-info-right-tracks-artist {
+    padding-top: 10px;
+}
+
+.pc-info-right-tracks-play {
+    width: 3% !important;
+}

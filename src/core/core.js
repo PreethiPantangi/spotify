@@ -11,6 +11,7 @@ import SearchComponent from './content-components/search/search'
 import LibraryComponent from './content-components/library/library'
 import CreatePlaylistComponent from './content-components/create-playlist/create-playlist'
 import LikedSongsComponent from './content-components/liked-songs/liked-songs';
+import PlaylistComponent from './playlists/playlist/playlist';
 
 const CoreComponent = () => {
     return (
@@ -38,6 +39,7 @@ const CoreComponent = () => {
                         <Route exact path='/collection' component={LibraryComponent}></Route>
                         <Route exact path='/createPlaylist' component={CreatePlaylistComponent}></Route>
                         <Route exact path='/likedSongs' component={LikedSongsComponent}></Route>
+                        <Route exact path='/playlist/:id' component={PlaylistComponent} />
                     </Switch>
                 </div>
             </div>
