@@ -1,0 +1,78 @@
+.core-left {
+    float: left;
+    width: 20%;
+    position: fixed;
+}
+
+.core-right {
+    float: left;
+    width: 80%;
+    background-color: #1d1d1d;
+    overflow: auto;
+    position: absolute;
+    left: 20%;
+    padding-bottom: 7% !important;
+    height: 100vh;
+}
+
+.core-left, .core-right, .core-profile, .core-content, .core-left-logo, .core-left-playlists{
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.core-profile {
+    background-color: black;
+    height: 7%;
+    width: 78% !important;
+    position: fixed;
+    top: 0;
+}
+
+.core-content {
+    top: 10%;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.core-footer {
+    background-color: #181818;
+    height: 80px;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.core-profile-navigation, .core-profile-uname {
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.core-profile-navigation {
+    float: left;
+    width: 50%;
+}
+
+.core-profile-uname {
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+
+.core-left-logo {
+    height: 45vh;
+    overflow-y: auto;
+}
+
+.core-left-playlists {
+    height: 40vh;
+    overflow-y: auto;
+}
+
+hr {
+    background-color: white;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
