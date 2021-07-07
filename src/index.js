@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+axios.interceptors.request.use(
+  config => {
+    if (sessionStorage.getItem('access_token')) {
+      config.headers['Authorization'] = 'Bearer ' + sessionStorage.getItem('access_token')
+    }
+    return config
+  },
+  error => {
+    Promise.reject(error)
+  }
+)
 
 ReactDOM.render(
   <React.StrictMode>
