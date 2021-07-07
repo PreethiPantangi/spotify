@@ -2,23 +2,3 @@ img.sc-logo {
     width: 50%;
     padding-bottom: 10%;
 }
-
-a, .sc-menu-item {
-    margin-bottom: 5%;
-    box-sizing: border-box;
-    padding: 2%;
-    width: 100%;
-    cursor: pointer;
-    color: #9b9797 !important;
-    text-decoration: none !important;
-}
-
-a:hover, .sc-menu-item:hover {
-    color: white !important;
-    width: 100%;
-}
-
-.sc-menu-item-selected{
-    background-color: #282828;
-    color: white !important;    
-}

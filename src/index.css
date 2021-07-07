@@ -30,3 +30,21 @@ i{
   padding-right: 3%;
   cursor: pointer;
 }
+
+a, .sc-menu-item, .pc-playlist-item {
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  padding: 2%;
+  width: 100%;
+  cursor: pointer;
+  color: #9b9797 !important;
+  text-decoration: none !important;
+}
+
+a:hover, .sc-menu-item:hover, .pc-playlist-item:hover {
+  color: white !important;
+}
+
+.sc-menu-item-selected , .pc-playlist-item-selected{
+  color: white !important;    
+}

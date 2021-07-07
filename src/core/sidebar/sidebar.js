@@ -19,9 +19,11 @@ const SidebarComponent = () => {
         <div className='sidebarComponent' >
             <img className='sc-logo' src={logo} alt='Spotify' />
             {menu.map(item =>
-                <div onClick={() => { setSelectedItem(item.key) }} key={item.key} className={selectedItem === item.key ? 'sc-menu-item sc-menu-item-selected' : 'sc-menu-item'}>
-                    <Link to={item.route} ><i className={item.iconClass}></i>{item.name}</Link>
-                </div>
+                <Link to={item.route} onClick={() => { setSelectedItem(item.key) }} key={item.key} className={selectedItem === item.key ? 'sc-menu-item sc-menu-item-selected' : 'sc-menu-item'}>
+                    <div >
+                        <i className={item.iconClass}></i>{item.name}
+                    </div>
+                </Link>
             )}
         </div>
     );
