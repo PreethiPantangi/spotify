@@ -17,7 +17,7 @@ const PlaylistsComponent = ({ playlists }) => {
     return (
         <div className='playlistsComponent' >
             {playlists && playlists.map(playlist =>
-                <Link onClick={() => { setSelectedPlaylist(playlist.id) }} className={selectedPlaylist === playlist.id ? 'pc-playlist-item pc-playlist-item-selected' : 'pc-playlist-item'} key={playlist.id}>
+                <Link to={''} onClick={() => { setSelectedPlaylist(playlist.id) }} className={selectedPlaylist === playlist.id ? 'pc-playlist-item pc-playlist-item-selected' : 'pc-playlist-item'} key={playlist.id}>
                     <div >
                         {playlist.name}
                     </div>
@@ -28,7 +28,6 @@ const PlaylistsComponent = ({ playlists }) => {
 }
 
 const mapStateToProps = state => {
-    console.log(state.playlists.playlists.items)
     return {
         playlists: state.playlists.playlists && state.playlists.playlists.items
     }
