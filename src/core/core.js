@@ -12,6 +12,7 @@ import LibraryComponent from './content-components/library/library'
 import CreatePlaylistComponent from './content-components/create-playlist/create-playlist'
 import LikedSongsComponent from './content-components/liked-songs/liked-songs';
 import PlaylistComponent from './playlists/playlist/playlist';
+import FooterComponent from './footer/footer'
 
 const CoreComponent = () => {
     return (
@@ -44,7 +45,7 @@ const CoreComponent = () => {
                 </div>
             </div>
             <div className='core-footer' >
-                Footer
+                <FooterComponent />
             </div>
         </div>
     );

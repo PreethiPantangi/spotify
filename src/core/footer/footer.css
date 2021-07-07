@@ -1,0 +1,18 @@
+.fc-song-info {
+    float: left;
+    width: 20%;
+}
+.fc-song-player{
+    float: left;
+    width: 56%;
+}
+.fc-song-controls{
+    float: left;
+    width: 23%;
+}
+
+.fc-song-info,.fc-song-player,.fc-song-controls{
+    box-sizing: border-box;
+    padding: 5px;
+    height: 60px;
+}

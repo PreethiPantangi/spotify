@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './playlist.css'
 import { connect, useDispatch } from 'react-redux';
 import { getPlaylist } from '../../../reducer/index'
+import { setFooterInfo } from '../../../reducer/index'
 
 const PlaylistComponent = (props) => {
 
@@ -11,12 +12,18 @@ const PlaylistComponent = (props) => {
 
     const [style, setStyle] = useState(false);
     const [currentTrackID, setCurrentTrackID] = useState(0);
+    const [selectedTrack, setSelectedTrack] = useState(0)
 
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(getPlaylist(playlistId))
     }, [dispatch, playlistId])
+
+    const getTrackInfo = (trackId) => {
+        dispatch(setFooterInfo(trackId))
+        setSelectedTrack(trackId)
+    }
 
     return (
         <div className='playlistComponent' >
@@ -46,10 +53,13 @@ const PlaylistComponent = (props) => {
                     {props.tracks && props.tracks.map((track, index) => (
                         <tbody key={track.track.id}>
                             <tr
+                                onClick={() => getTrackInfo(track.track.id)}
                                 onMouseEnter={(e) => { setStyle(true); setCurrentTrackID(track.track.id) }}
                                 onMouseLeave={(e) => { setStyle(false); setCurrentTrackID(track.track.id) }}
                             >
-                                <td className='pc-info-right-tracks-play'>{style && track.track.id === currentTrackID ? <i class="fas fa-play"></i> : index + 1}</td>
+                                <td className={track.track.id === selectedTrack ? 'pc-info-right-tracks-play pc-info-right-tracks-selected' : 'pc-info-right-tracks-play'}>
+                                    {track.track.id === selectedTrack ? <img src='https://open.scdn.co/cdn/images/equaliser-animated-green.73b73928.gif' alt='Playing' /> : (style && track.track.id === currentTrackID ? <i className="fas fa-play"></i> : index + 1)}
+                                </td>
                                 <td>
                                     <div className="pc-info-right-tracks-cell-left">
                                         <div>
@@ -57,7 +67,7 @@ const PlaylistComponent = (props) => {
                                         </div>
                                     </div>
                                     <div className='pc-info-right-tracks-cell-right' >
-                                        <div>
+                                        <div className={track.track.id === selectedTrack ? 'pc-info-right-tracks-selected' : null} >
                                             {track.track.name.length < 40 ? track.track.name : track.track.name.slice(0, 40) + '...'}
                                         </div>
                                         <div className='pc-info-right-tracks-artist' >

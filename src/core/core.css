@@ -42,6 +42,8 @@
     width: 100%;
     bottom: 0;
     left: 0;
+    box-sizing: border-box;
+    padding: 1%;
 }
 
 .core-profile-navigation, .core-profile-uname {

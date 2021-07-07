@@ -22,7 +22,6 @@
 }
 
 table {
-    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -48,9 +47,13 @@ td {
 }
 
 .pc-info-right-tracks-artist {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .pc-info-right-tracks-play {
-    width: 3% !important;
+    width: 5% !important;
+}
+
+.pc-info-right-tracks-selected {
+    color: #1db954;
 }
