@@ -41,6 +41,7 @@ a, .sc-menu-item, .pc-playlist-item {
   text-decoration: none !important;
 }
 
+
 a:hover, .sc-menu-item:hover, .pc-playlist-item:hover {
   color: white !important;
 }

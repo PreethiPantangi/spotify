@@ -13,7 +13,8 @@ const scopes = [
     "user-read-private",
     "user-read-email",
     "user-library-read",
-    "user-follow-read"
+    "user-follow-read",
+    "user-top-read"
 ];
 
 

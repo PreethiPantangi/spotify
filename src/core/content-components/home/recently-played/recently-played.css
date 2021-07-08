@@ -1,0 +1,52 @@
+.rpc-heading {
+    font-size: 25px;
+    font-weight: bold;
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.rpc-seeall {
+    width: 50%;
+    height: 33px;
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.rpc-seeall:hover {
+    text-decoration: underline;
+}
+
+.rpc-track-item {
+    float: left;
+    background-color: #282828;
+    margin: 10px;
+}
+
+.rpc-track-item:hover {
+    background-color: #3f3d3d;
+}
+
+.rpc-track-item-data {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.rpc-track-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.rpc-track-names {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.rpc-track-artists {
+    font-size: 13px;
+}
